@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <base href="/">
 </head>
-<body>
+<body class="mat-typography">
 <div class="logo">Mapa</div>
   <div class="topnav" id="myTopnav">
     <div class="dropdown">
@@ -27,6 +27,10 @@
     </div>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
+  <mat-sidenav-container>
+    <mat-sidenav opened>Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main</mat-sidenav-content>
+  </mat-sidenav-container>
   <app-root></app-root>  
   <app-map></app-map>
 </body>

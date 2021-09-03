@@ -13,16 +13,30 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { DropDownButtonModule } from '@syncfusion/ej2-angular-splitbuttons';
 import { enableRipple } from '@syncfusion/ej2-base';
-import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarModule } from 'ng-icon-sidebar';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
-enableRipple(true);
+
+const material = [
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatIconModule,
+  MatBadgeModule,
+  MatProgressSpinnerModule,
+  MatToolbarModule,
+  MatSidenavModule
+];
 
 
 @NgModule({
+  exports: [MatSidenavModule],
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +49,14 @@ enableRipple(true);
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    SidebarModule
+    SidebarModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

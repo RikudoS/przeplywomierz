@@ -20,5 +20,6 @@
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": true,
     "preserveWhitespaces": true,
+    "strictTemplates": true
   }
 }
