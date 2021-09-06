@@ -11,9 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <base href="/">
+  <script src="assets/js/nand.js"></script>
 </head>
 <body class="mat-typography">
 <div class="logo">Mapa</div>
+
+<div id="bord" class="board"></div>
+
   <div class="topnav" id="myTopnav">
     <div class="dropdown">
       <button class="dropbtn"><b>NLM</b><br>Powered by DHI
@@ -25,12 +29,46 @@
         <a href="#">Link 3</a>
       </div>
     </div>
-    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
-  <mat-sidenav-container>
-    <mat-sidenav opened>Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main</mat-sidenav-content>
-  </mat-sidenav-container>
+
+  <div id="mySidebar" class="sidebar">
+    <div class="flow">
+      <h2 style="color: blue;">&#8592; Przepływomierz</h2>
+    </div>
+    <div class="box">
+      <p>
+        Instrukcja<br>
+        Wypełnij dane i kliknij przycisk
+        <span style="color:blue">dodaj punkt</span>
+        .Następnie wybierz punkt na mapie i kliknij
+        <span style="color:blue">zatwierdź.</span>
+      </p>
+    </div>
+    <div class="box2">
+      <form>
+        <h4 style="color: blue;"><b>Dodaj nowy przepływomierz</b></h4>
+        <label for="name">Nazwa:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <br>
+        <label for="type">Typ:</label><br>
+        <select name="type" id="type">
+          <option value="virtual">Przepływ wirtualny</option>
+          <option value="statio">Przepływ stacjonarny</option>
+          <option value="layere">Przepływ warstwowy</option>
+        </select>
+        <p></p>
+        <label for="waterflow">Średnia wartość przepływu:</label><br>
+        <input type="text" id="waterflow" name="waterflow"><br>
+        <p></p>
+        <input type="reset" class="button button1"></input>
+        <button class="button button2">Zatwierdź</button>
+      </form>
+    </div>
+  </div>
+  
+  <div id="main">
+    <button id="openbtn" class="openbtn" onclick="toggleNav()">&#43; </button>
+  </div>
   <app-root></app-root>  
   <app-map></app-map>
 </body>

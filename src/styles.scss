@@ -136,13 +136,95 @@ body {
     text-align: left;
   }
 }
-//Sidebar
-.mat-sidenav-container {
-  height: 100%;
-  position: relative;
-  z-index: 10;
+//formularz
+.box {
+  margin-top: 20px;
+  border: 2px solid #dbe4e9;
+  padding-left: 20px;
+  font-size: 14px;
+  text-align: left;
+  border-left: none;
 }
-.mat-sidebar {
-  position: relative;
+
+.box2 {
+  padding-left: 20px;
+  border: 2px solid #dbe4e9;
+  border-top: none;
+  border-left: none;
+  font-size: 14px;
+  text-align: left;
+}
+
+//Sidebar
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  background-color: #f2f5f7;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  color: #0b4566;
+  padding: 10px 21px;
+  border: 1px solid ;
+  position: absolute;
   z-index: 10;
+  right: 0px;
+  margin-top: 22.5vw;
+}
+
+#main {
+  transition: margin-right .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.board {
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  z-index: 10;
+  width: 55px;
+  background-color: #f2f5f7;
+  border-right: 2px solid #dbe4e9;
+}
+
+.flow {
+  padding-left: 20px;
+}
+
+//przyciski
+.button1 {
+  height: 3vw;
+  width: 4vw;
+  background-color: white;
+  border: 2px solid #33ccff;
+  border-radius: 5px;
+  color: #33ccff;
+}
+
+.button2 {
+  height: 3vw;
+  width: 4vw;
+  background-color: #33ccff;
+  border: 1px solid #33ccff;
+  border-radius: 5px;
+  color: white;
+  margin-left: 20px;
 }
