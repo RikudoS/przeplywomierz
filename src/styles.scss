@@ -166,7 +166,7 @@ body {
   background-color: #f2f5f7;
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .sidebar a:hover {
@@ -183,6 +183,7 @@ body {
   z-index: 10;
   right: 0px;
   margin-top: 22.5vw;
+  transition: 1s;
 }
 
 #main {
@@ -203,6 +204,7 @@ body {
   width: 55px;
   background-color: #f2f5f7;
   border-right: 2px solid #dbe4e9;
+  transition: 1s;
 }
 
 .flow {
@@ -228,3 +230,41 @@ body {
   color: white;
   margin-left: 20px;
 }
+
+//akordeon legenda
+.dropdwn {
+  position: absolute;
+  top: 70px;
+  right: 500px;
+  z-index: 10;
+}
+
+.dropdown-menu {
+  z-index: 10;
+  width: 150px;
+  border: none;
+  border-radius: unset;
+  top: 34px;
+  background-color: #f8f8f8;
+}
+
+.btn {
+  color: #104969;
+  font-size: 12px;
+  background-color: #ffffff;
+  border-radius: unset;
+  border: none;
+  height: 35px;
+  width: 150px;
+  text-align: left;
+}
+
+.dropdown-item-text {
+  text-align: right;
+  color: #104969;
+}
+
+.btn:hover {
+  color: #104969;
+}
+
